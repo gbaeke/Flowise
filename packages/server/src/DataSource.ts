@@ -12,7 +12,7 @@ export const init = async (): Promise<void> => {
 
     appDataSource = new DataSource({
         type: 'sqlite',
-        database: path.resolve(homePath, 'database.sqlite'),
+        database: '/data/database.sqlite',
         synchronize: true,
         entities: [ChatFlow, ChatMessage],
         migrations: []

@@ -10,4 +10,6 @@ RUN npm install -g flowise
 
 WORKDIR /data
 
-CMD "flowise"
+RUN ln -s /root/.flowise /data
+
+ENTRYPOINT [ "flowise", "start" ]
